@@ -540,8 +540,53 @@ img {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop:not(.is-open) .modal {
   transform: translate(-50%, -100%);
+}
+
+.button-last {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-last:hover,
+.button-last:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.backdrop-button {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-last:hover .backdrop-button,
+.button-last:focus .backdrop-button {
+  fill: #ffffff;
+}
+
+.backdrop-paragraph {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  --main-text-color: #2e2f42;
+  color: var(--main-text-color);
+  margin-bottom: 16px;
 }
